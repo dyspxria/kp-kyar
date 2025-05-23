@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас | Супермаркет</title>
+  <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="header">
+    <!-- Верхняя часть шапки -->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-contacts">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+78005553535"> + 375 29 456 23 56</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>г. Минск, ул. Пушкина</span>
+          </div>
+        </div>
+        <div class="header-links">
+          <a href="about.html" class="header-link">О нас</a>
+          <a href="index.html" class="header-link">Главная</a>
+          <a href="contact.html" class="header-link">Контакты</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Основная часть шапки -->
+    <div class="header-main">
+      <div class="container">
+        <div class="header-logo">
+          <a href="/" class="logo-link">
+            <img src="images/305728.svg" alt="FreshMarket" class="logo-img">
+            <div class="logo-text">
+              <span class="logo-title">FreshMarket</span>
+              <span class="logo-slogan">Свежие продукты каждый день</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="header-search">
+          <input type="text" placeholder="Ищите молоко, хлеб, яйца...">
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <a href="account.html" class="action-link">
+            <i class="fas fa-user"></i>
+            <span>Аккаунт</span>
+          </a>
+          <a href="cart.html" class="action-link cart-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Корзина</span>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+        
+        <!-- Бургер-меню (чистый CSS) -->
+        <div class="burger-menu">
+          <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+          <label for="burger-toggle" class="burger-button">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </label>
+          
+          <nav class="mobile-nav">
+            <div class="mobile-nav-container">
+              <ul class="mobile-nav-list">
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Основная навигация -->
+    <nav class="header-nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#">Фрукты и овощи</a></li>
+          <li><a href="#">Молочные продукты</a></li>
+          <li><a href="#">Мясо и птица</a></li>
+          <li><a href="#">Бакалея</a></li>
+          <li><a href="#">Напитки</a></li>
+          <li><a href="#">Хлеб и выпечка</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="about">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Главная</a> / <span>О компании</span>
+        </div>
+        
+        <h2>О компании</h2>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">
+              <i class="fas fa-leaf"></i> Наш онлайн-супермаркет — это удобное место для покупок продуктов и товаров первой необходимости с доставкой до двери.
+            </p>
+            <p>
+              Мы работаем с 2020 года и уже обслужили более 50 000 довольных клиентов. В нашем каталоге представлено более 5000 товаров от ведущих производителей.
+            </p>
+            <div class="highlight-box">
+              <h3><i class="fas fa-bullseye"></i> Наша миссия</h3>
+              <p>Предоставлять качественные экологичные продукты по доступным ценам с быстрой доставкой.</p>
+            </div>
+            
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Лет на рынке</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">Довольных клиентов</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5K+</span>
+                <span class="stat-label">Товаров</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-image">
+            <img src="images/ashan.jpg" alt="Наша команда" class="team-photo">
+            <div class="image-caption">
+              <i class="fas fa-users"></i> Наша дружная команда профессионалов
+            </div>
+          </div>
+        </div>
+        
+        <div class="values">
+          <h3><i class="fas fa-star"></i> Наши ценности</h3>
+          <div class="values-grid">
+            <div class="value-card">
+              <i class="fas fa-heart"></i>
+              <h4>Качество</h4>
+              <p>Тщательный отбор поставщиков и контроль качества</p>
+            </div>
+            <div class="value-card">
+              <i class="fas fa-truck"></i>
+              <h4>Быстрая доставка</h4>
+              <p>Доставка в течение 2 часов по городу</p>
+            </div>
+            <div class="value-card">
+              <i class="fas fa-recycle"></i>
+              <h4>Экологичность</h4>
+              <p>Используем биоразлагаемую упаковку</p>
+            </div>
+            <div class="value-card">
+              <i class="fas fa-hand-holding-usd"></i>
+              <h4>Доступные цены</h4>
+              <p>Регулярные акции и программа лояльности</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a href="/" class="footer-logo">
+            <img src="images/305728.svg" alt="FreshMarket" width="160">
+          </a>
+          <p class="footer-description">
+            FreshMarket — сеть супермаркетов свежих продуктов с 2010 года. 
+            Мы работаем напрямую с фермерами и производителями, чтобы предложить 
+            вам самые свежие и качественные продукты.
+          </p>
+        </div>
+  
+        <div class="footer-contacts">
+          <h3 class="footer-title">Контакты</h3>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>г. Минск, ул. Пушкина, 1</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+71234567890">+375 29 65 43 21</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@freshmarket.ru">info@freshmarket.ru</a>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Ежедневно с 8:00 до 22:00</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="footer-social">
+          <h3 class="footer-title">Мы в соцсетях</h3>
+          <div class="social-icons">
+            <a href="https://vk.com/" aria-label="ВКонтакте">
+              <img src="images/vk.jpg" alt="Vk-logo"> 
+            </a>
+            <a href="https://Facebook.com/" aria-label="Facebook">
+              <img src="images/facebook.jpg" alt="Facebook-logo">
+            </a>
+            <a href="https://x.com/" aria-label="X">
+              <img src ="images/x.jpg" alt="X-logo">
+            </a>
+            <a href="https://instagram.com/" aria-label="Instagram">
+              <img src="images/instagram.jpg" alt="Instagram-logo">
+            </a>
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <div class="copyright">
+          © 2023 FreshMarket. Все права защищены.
+        </div>
+        <div class="legal">
+          <a href="/privacy">Политика конфиденциальности</a>
+          <a href="/terms">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

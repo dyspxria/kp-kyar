@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Супермаркет | Главная</title>
+  <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+<div>
+ 
+  <header class="header">
+    <!-- Верхняя часть шапки -->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-contacts">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+78005553535"> + 375 29 456 23 56</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>г. Минск, ул. Пушкина</span>
+          </div>
+        </div>
+        <div class="header-links">
+          <a href="about.html" class="header-link">О нас</a>
+          <a href="index.html" class="header-link">Главная</a>
+          <a href="contact.html" class="header-link">Контакты</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Основная часть шапки -->
+    <div class="header-main">
+      <div class="container">
+        <div class="header-logo">
+          <a href="/" class="logo-link">
+            <img src="images/305728.svg" alt="FreshMarket" class="logo-img">
+            <div class="logo-text">
+              <span class="logo-title">FreshMarket</span>
+              <span class="logo-slogan">Свежие продукты каждый день</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="header-search">
+          <input type="text" placeholder="Ищите молоко, хлеб, яйца...">
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <a href="account.html" class="action-link">
+            <i class="fas fa-user"></i>
+            <span>Аккаунт</span>
+          </a>
+          <a href="cart.html" class="action-link cart-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Корзина</span>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+        
+        <!-- Бургер-меню (чистый CSS) -->
+        <div class="burger-menu">
+          <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+          <label for="burger-toggle" class="burger-button">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </label>
+          
+          <nav class="mobile-nav">
+            <div class="mobile-nav-container">
+              <ul class="mobile-nav-list">
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Основная навигация -->
+    <nav class="header-nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#">Фрукты и овощи</a></li>
+          <li><a href="#">Молочные продукты</a></li>
+          <li><a href="#">Мясо и птица</a></li>
+          <li><a href="#">Бакалея</a></li>
+          <li><a href="#">Напитки</a></li>
+          <li><a href="#">Хлеб и выпечка</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <main class="main-page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-image">
+        <img src="images/sale2.jpg" alt="Акция дня" class="hero-img">
+        <div class="hero-badge">
+          <span class="badge-text">Акция недели</span>
+          <span class="badge-discount">-40%</span>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-tag">Новинка сезона</div>
+        <h1 class="hero-title">Свежие продукты <span class="highlight">с доставкой</span> за 30 минут</h1>
+        <p class="hero-description">Более 5000 товаров по выгодным ценам с гарантией свежести</p>
+        <div class="hero-actions">
+          <a href="catalog.html" class="hero-button primary">
+            <i class="fas fa-shopping-basket"></i> Перейти в каталог
+          </a>
+          <a href="#features" class="hero-button secondary">
+            <i class="fas fa-info-circle"></i> Подробнее
+          </a>
+        </div>
+        <div class="hero-features">
+          <div class="feature-item">
+            <i class="fas fa-check-circle" style="color: #2ecc71;"></i>
+            <span>Гарантия свежести</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-percentage" style="color: #e74c3c;"></i>
+            <span>Скидки до 70%</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-truck" style="color: #3498db;"></i>
+            <span>Быстрая доставка</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="section-header">
+        <h2 class="section-title">Почему выбирают нас</h2>
+        <p class="section-subtitle">Лучшее качество и сервис для наших клиентов</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" style="--card-color: #3498db;">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Молниеносная доставка</h3>
+          <p>Привезём за 30 минут или вернём 20% от суммы заказа</p>
+        </div>
+        <div class="feature-card" style="--card-color: #e74c3c;">
+          <div class="feature-icon">
+            <i class="fas fa-tag"></i>
+          </div>
+          <h3>Выгодные акции</h3>
+          <p>Ежедневные скидки и специальные предложения</p>
+        </div>
+        <div class="feature-card" style="--card-color: #2ecc71;">
+          <div class="feature-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Свежие продукты</h3>
+          <p>Прямые поставки от фермеров и производителей</p>
+        </div>
+        <div class="feature-card" style="--card-color: #f39c12;">
+          <div class="feature-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Бонусная программа</h3>
+          <p>Копите баллы и получайте дополнительные скидки</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- CATEGORIES -->
+    <section class="categories">
+      <div class="section-header">
+        <h2 class="section-title">Популярные категории</h2>
+        <a href="catalog.html" class="view-all">Смотреть все <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="categories-grid">
+        <a href="#" class="category-card" style="--cat-color: #ff7675;">
+          <div class="category-icon">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+          <h3>Овощи и фрукты</h3>
+          <p>От 49 ₽</p>
+        </a>
+        <a href="#" class="category-card" style="--cat-color: #74b9ff;">
+          <div class="category-icon">
+            <i class="fas fa-cheese"></i>
+          </div>
+          <h3>Молочные продукты</h3>
+          <p>От 59 ₽</p>
+        </a>
+        <a href="#" class="category-card" style="--cat-color: #55efc4;">
+          <div class="category-icon">
+            <i class="fas fa-drumstick-bite"></i>
+          </div>
+          <h3>Мясо и птица</h3>
+          <p>От 299 ₽</p>
+        </a>
+        <a href="#" class="category-card" style="--cat-color: #a29bfe;">
+          <div class="category-icon">
+            <i class="fas fa-bread-slice"></i>
+          </div>
+          <h3>Хлеб и выпечка</h3>
+          <p>От 35 ₽</p>
+        </a>
+      </div>
+    </section>
+  
+    <!-- PROMO -->
+    <section class="promo">
+      <div class="promo-card" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);">
+        <div class="promo-content">
+          <div class="promo-tag">Акция недели</div>
+          <h3>Скидка 40% на свежие фрукты</h3>
+          <p>Только до воскресенья! Успейте купить сезонные фрукты по специальной цене</p>
+          <div class="promo-timer">
+            <i class="fas fa-clock"></i>
+            <span>До конца акции: <strong>23:59:59</strong></span>
+          </div>
+          <a href="catalog.html" class="promo-button">
+            <i class="fas fa-shopping-cart"></i> Купить со скидкой
+          </a>
+        </div>
+        <div class="promo-image">
+          <img src="images/fruits.jpg" alt="Фрукты со скидкой" class="floating">
+        </div>
+      </div>
+    </section>
+  
+    <!-- PRODUCTS -->
+    <section class="products-section">
+      <div class="container">
+        <h2 class="section-title">Популярные товары</h2>
+        
+        <div class="products-horizontal-scroll">
+          <!-- Product Card 1 -->
+          <div class="product-card">
+            <div class="product-badge hit">Хит</div>
+            <div class="product-image">
+              <img src="images/milk.png" alt="Молоко">
+            </div>
+            <div class="product-info">
+              <h3>Молоко 2.5%</h3>
+              <p class="product-desc">1 л, ультрапастеризованное</p>
+              <div class="product-rating">
+                <i class="fas fa-star"></i> 4.8 (256)
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="current-price">2 ₽</span>
+                  <span class="old-price">3 ₽</span>
+                </div>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product Card 2 -->
+          <div class="product-card">
+            <div class="product-badge sale">-15%</div>
+            <div class="product-image">
+              <img src="images/hleb.jfif" alt="Хлеб">
+            </div>
+            <div class="product-info">
+              <h3>Хлеб Бородинский</h3>
+              <p class="product-desc">450 г, нарезка</p>
+              <div class="product-rating">
+                <i class="fas fa-star"></i> 4.5 (189)
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="current-price">1.4 ₽</span>
+                  <span class="old-price">1.6 ₽</span>
+                </div>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product Card 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/eggs.jpg" alt="Яйца">
+            </div>
+            <div class="product-info">
+              <h3>Яйца куриные С0</h3>
+              <p class="product-desc">10 шт., отборные</p>
+              <div class="product-rating">
+                <i class="fas fa-star"></i> 4.9 (324)
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="current-price">3.8 ₽</span>
+                </div>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product Card 4 -->
+          <div class="product-card">
+            <div class="product-badge new">Новинка</div>
+            <div class="product-image">
+              <img src="images/prot.png" alt="Сок">
+            </div>
+            <div class="product-info">
+              <h3>Протеиновое печенье</h3>
+              <p class="product-desc">12шт x 40г</p>
+              <div class="product-rating">
+                <i class="fas fa-star"></i> 4.7 (211)
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="current-price"> 25.9 ₽</span>
+                </div>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product Card 5 -->
+          <div class="product-card">
+            <div class="product-badge sale">-20%</div>
+            <div class="product-image">
+              <img src="images/teos.jpg" alt="Йогурт">
+            </div>
+            <div class="product-info">
+              <h3>Йогурт греческий</h3>
+              <p class="product-desc">200 г, натуральный</p>
+              <div class="product-rating">
+                <i class="fas fa-star"></i> 4.6 (178)
+              </div>
+              <div class="product-footer">
+                <div class="product-price">
+                  <span class="current-price">1.7 ₽</span>
+                  <span class="old-price">2.3 ₽</span>
+                </div>
+                <button class="add-to-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a href="/" class="footer-logo">
+            <img src="images/305728.svg" alt="FreshMarket" width="160">
+          </a>
+          <p class="footer-description">
+            FreshMarket — сеть супермаркетов свежих продуктов с 2010 года. 
+            Мы работаем напрямую с фермерами и производителями, чтобы предложить 
+            вам самые свежие и качественные продукты.
+          </p>
+        </div>
+  
+        <div class="footer-contacts">
+          <h3 class="footer-title">Контакты</h3>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>г. Минск, ул. Пушкина, 1</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+71234567890">+375 29 65 43 21</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@freshmarket.ru">info@freshmarket.ru</a>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Ежедневно с 8:00 до 22:00</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="footer-social">
+          <h3 class="footer-title">Мы в соцсетях</h3>
+          <div class="social-icons">
+            <a href="https://vk.com/" aria-label="ВКонтакте">
+              <img src="images/vk.jpg" alt="Vk-logo"> 
+            </a>
+            <a href="https://Facebook.com/" aria-label="Facebook">
+              <img src="images/facebook.jpg" alt="Facebook-logo">
+            </a>
+            <a href="https://x.com/" aria-label="X">
+              <img src ="images/x.jpg" alt="X-logo">
+            </a>
+            <a href="https://instagram.com/" aria-label="Instagram">
+              <img src="images/instagram.jpg" alt="Instagram-logo">
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <div class="copyright">
+          © 2023 FreshMarket. Все права защищены.
+        </div>
+        <div class="legal">
+          <a href="/privacy">Политика конфиденциальности</a>
+          <a href="/terms">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</div>
+</body>
+</html>

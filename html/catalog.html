@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог товаров | Супермаркет</title>
+  <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="header">
+    <!-- Верхняя часть шапки -->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-contacts">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+78005553535"> + 375 29 456 23 56</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>г. Минск, ул. Пушкина</span>
+          </div>
+        </div>
+        <div class="header-links">
+          <a href="about.html" class="header-link">О нас</a>
+          <a href="index.html" class="header-link">Главная</a>
+          <a href="contact.html" class="header-link">Контакты</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Основная часть шапки -->
+    <div class="header-main">
+      <div class="container">
+        <div class="header-logo">
+          <a href="/" class="logo-link">
+            <img src="images/305728.svg" alt="FreshMarket" class="logo-img">
+            <div class="logo-text">
+              <span class="logo-title">FreshMarket</span>
+              <span class="logo-slogan">Свежие продукты каждый день</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="header-search">
+          <input type="text" placeholder="Ищите молоко, хлеб, яйца...">
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        
+        <div class="header-actions">
+          <a href="account.html" class="action-link">
+            <i class="fas fa-user"></i>
+            <span>Аккаунт</span>
+          </a>
+          <a href="cart.html" class="action-link cart-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Корзина</span>
+            <span class="cart-count">0</span>
+          </a>
+        </div>
+        
+        <!-- Бургер-меню (чистый CSS) -->
+        <div class="burger-menu">
+          <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+          <label for="burger-toggle" class="burger-button">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </label>
+          
+          <nav class="mobile-nav">
+            <div class="mobile-nav-container">
+              <ul class="mobile-nav-list">
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="contact.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Основная навигация -->
+    <nav class="header-nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#">Фрукты и овощи</a></li>
+          <li><a href="#">Молочные продукты</a></li>
+          <li><a href="#">Мясо и птица</a></li>
+          <li><a href="#">Бакалея</a></li>
+          <li><a href="#">Напитки</a></li>
+          <li><a href="#">Хлеб и выпечка</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+        <div class="container">
+            <aside class="sidebar">
+                <h3><i class="fas fa-bars"></i> Категории</h3>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-apple-alt"></i> Фрукты и овощи</a></li>
+                    <li><a href="#"><i class="fas fa-wine-bottle"></i> Молочные продукты</a></li>
+                    <li><a href="#"><i class="fas fa-drumstick-bite"></i> Мясо и рыба</a></li>
+                    <li><a href="#"><i class="fas fa-bread-slice"></i> Бакалея</a></li>
+                    <li><a href="#"><i class="fas fa-wine-glass-alt"></i> Напитки</a></li>
+                    <li><a href="#"><i class="fas fa-candy-cane"></i> Сладости</a></li>
+                </ul>
+
+                <div class="filters">
+                    <h3><i class="fas fa-filter"></i> Фильтры</h3>
+                    <div class="filter-group">
+                        <label><input type="checkbox" checked> В наличии</label>
+                        <label><input type="checkbox"> Акции</label>
+                        <label><input type="checkbox"> Новинки</label>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products">
+                <div class="section-header">
+                    <h2>Фрукты и овощи</h2>
+                    <div class="sort-options">
+                        <span>Сортировка:</span>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По возрастанию цены</option>
+                            <option>По убыванию цены</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Карточка 1 -->
+                    <div class="product-card">
+                        <div class="product-badge">Акция</div>
+                        <div class="product-image">
+                            <img src="images/apple.jpg" alt="Яблоки">
+                        </div>
+                        <div class="product-info">
+                            <h3>Яблоки Голден</h3>
+                            <p class="product-description">1 кг, сладкие</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.7 (128)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">129 ₽</span>
+                                <span class="old-price">149 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="product-card">
+                        <div class="product-badge new">Новинка</div>
+                        <div class="product-image">
+                            <img src="images/milk.png" alt="Молоко">
+                        </div>
+                        <div class="product-info">
+                            <h3>Молоко 2.5%</h3>
+                            <p class="product-description">1 л, ультрапастеризованное</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8 (256)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">89 ₽</span>
+                                <span class="old-price">99 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Остальные карточки -->
+                    <!-- Карточка 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/hleb.jfif" alt="Хлеб">
+                        </div>
+                        <div class="product-info">
+                            <h3>Хлеб Бородинский</h3>
+                            <p class="product-description">450 г, нарезка</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>4.2 (87)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">45 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div class="product-card">
+                        <div class="product-badge">Акция</div>
+                        <div class="product-image">
+                            <img src="images/chicken.jfif" alt="Курица">
+                        </div>
+                        <div class="product-info">
+                            <h3>Курица охлаждённая</h3>
+                            <p class="product-description">1 кг, филе</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.6 (214)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">299 ₽</span>
+                                <span class="old-price">349 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/water.jfif" alt="Вода">
+                        </div>
+                        <div class="product-info">
+                            <h3>Вода минеральная</h3>
+                            <p class="product-description">1.5 л, газированная</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>4.0 (56)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">65 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 6 -->
+                    <div class="product-card">
+                        <div class="product-badge new">Новинка</div>
+                        <div class="product-image">
+                            <img src="images/chocolate.jpg" alt="Шоколад">
+                        </div>
+                        <div class="product-info">
+                            <h3>Шоколад молочный</h3>
+                            <p class="product-description">100 г, с фундуком</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>5.0 (312)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">95 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/tvorog.png" alt="Творог">
+                        </div>
+                        <div class="product-info">
+                            <h3>Творог 5%</h3>
+                            <p class="product-description">200 г, обезжиренный</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>3.8 (76)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">68 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 8 -->
+                    <div class="product-card">
+                        <div class="product-badge">Акция</div>
+                        <div class="product-image">
+                            <img src="images/cherrypom.jpg" alt="Помидоры">
+                        </div>
+                        <div class="product-info">
+                            <h3>Помидоры черри</h3>
+                            <p class="product-description">250 г, веточные</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>4.3 (92)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">189 ₽</span>
+                                <span class="old-price">219 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 9 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/juice.jpg" alt="Сок">
+                        </div>
+                        <div class="product-info">
+                            <h3>Сок "Добрый"</h3>
+                            <p class="product-description">1 л, прямого отжима</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.5 (143)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">129 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 10 -->
+                    <div class="product-card">
+                        <div class="product-badge new">Новинка</div>
+                        <div class="product-image">
+                            <img src="images/teos.jpg" alt="Йогурт">
+                        </div>
+                        <div class="product-info">
+                            <h3>Йогурт греческий</h3>
+                            <p class="product-description">150 г, с мёдом</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>5.0 (87)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">79 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 11 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/banan.jfif" alt="Банан">
+                        </div>
+                        <div class="product-info">
+                            <h3>Бананы</h3>
+                            <p class="product-description">1 кг, спелые</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>4.1 (104)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">89 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 12 -->
+                    <div class="product-card">
+                        <div class="product-badge">Акция</div>
+                        <div class="product-image">
+                            <img src="images/CHEESE.jpg" alt="Сыр">
+                        </div>
+                        <div class="product-info">
+                            <h3>Сыр Российский</h3>
+                            <p class="product-description">200 г, 50% жирности</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.6 (178)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">159 ₽</span>
+                                <span class="old-price">189 ₽</span>
+                            </div>
+                            <button class="add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a href="/" class="footer-logo">
+            <img src="images/305728.svg" alt="FreshMarket" width="160">
+          </a>
+          <p class="footer-description">
+            FreshMarket — сеть супермаркетов свежих продуктов с 2010 года. 
+            Мы работаем напрямую с фермерами и производителями, чтобы предложить 
+            вам самые свежие и качественные продукты.
+          </p>
+        </div>
+  
+        <div class="footer-contacts">
+          <h3 class="footer-title">Контакты</h3>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>г. Минск, ул. Пушкина, 1</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+71234567890">+375 29 65 43 21</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@freshmarket.ru">info@freshmarket.ru</a>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Ежедневно с 8:00 до 22:00</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="footer-social">
+          <h3 class="footer-title">Мы в соцсетях</h3>
+          <div class="social-icons">
+            <a href="https://vk.com/" aria-label="ВКонтакте">
+              <img src="images/vk.jpg" alt="Vk-logo"> 
+            </a>
+            <a href="https://Facebook.com/" aria-label="Facebook">
+              <img src="images/facebook.jpg" alt="Facebook-logo">
+            </a>
+            <a href="https://x.com/" aria-label="X">
+              <img src ="images/x.jpg" alt="X-logo">
+            </a>
+            <a href="https://instagram.com/" aria-label="Instagram">
+              <img src="images/instagram.jpg" alt="Instagram-logo">
+            </a>
+          </div>
+      </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <div class="copyright">
+          © 2023 FreshMarket. Все права защищены.
+        </div>
+        <div class="legal">
+          <a href="/privacy">Политика конфиденциальности</a>
+          <a href="/terms">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+
+</div>
+</body>
+</html>
