@@ -1,0 +1,151 @@
+/* Цветовая палитра */
+$footer-green: #2e7d32;
+$footer-dark-green: #1b5e20;
+$footer-light-green: #81c784;
+$footer-text: #ffffff;
+
+.footer {
+  background: linear-gradient(135deg, $footer-green, $footer-dark-green);
+  color: $footer-text;
+  padding: 3rem 0 1rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba($footer-light-green, 0.2);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &-about {
+    .footer-logo {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-description {
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+  }
+
+  &-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: $footer-light-green;
+    }
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+
+      i {
+        color: $footer-light-green;
+        margin-top: 3px;
+      }
+
+      a {
+        color: $footer-text;
+        text-decoration: none;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.9;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba($footer-text, 0.1);
+      border-radius: 50%;
+      color: $footer-text;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+
+      &:hover {
+        background: $footer-text;
+        color: $footer-green;
+        transform: translateY(-3px);
+      }
+    }
+    img {
+      width: 60%; 
+      height: 60%;
+      object-fit: contain;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .legal {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: $footer-text;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+  }
+}

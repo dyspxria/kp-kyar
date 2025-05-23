@@ -1,0 +1,151 @@
+// Основные цвета
+$primary-color: #2e7d32;
+$primary-light: #60ad5e;
+$primary-dark: #005005;
+$text-color: #333;
+$white: #fff;
+
+// Миксины
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Стили для main
+main {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  padding: 2rem 0;
+  background-color: #f5f5f5;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  h2, h3 {
+    color: $primary-dark;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  #contact-form {
+    margin-bottom: 2rem;
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: $primary-dark;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+          box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+        }
+      }
+
+      textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+    }
+
+    .btn {
+      background-color: $primary-color;
+      color: $white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $primary-dark;
+      }
+    }
+  }
+
+  .contact-info {
+    background-color: lighten($primary-light, 40%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid $primary-color;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: $primary-dark;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      color: darken($text-color, 10%);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  main {
+    padding: 1rem 0;
+
+    .contact {
+      padding: 1.5rem;
+    }
+  }
+}
+.success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    text-align: center;
+  }

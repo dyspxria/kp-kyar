@@ -1,0 +1,393 @@
+// Цветовая палитра
+$primary-green: #2e7d32;
+$light-green: #d8e9d6;
+$dark-green: #1b5e20;
+$accent-green: #4caf50;
+$white: #ffffff;
+$light-gray: #f5f5f5;
+$text-color: #333333;
+
+// Адаптивные брейкпоинты
+$mobile: 480px;    // Телефоны
+$tablet: 768px;    // Планшеты
+$laptop: 1024px;   // Ноутбуки
+$desktop: 1200px;  // ПК
+$wide: 1440px;     // Большие экраны
+
+// Базовые стили (Mobile First)
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5; // Увеличим для мобильных
+  color: $text-color;
+  background-color: $light-gray;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%; // Фикс для iOS
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  
+  // Постепенно увеличиваем max-width
+  @media (min-width: $tablet) {
+    max-width: 720px;
+    padding: 0 20px;
+  }
+  
+  @media (min-width: $laptop) {
+    max-width: 960px;
+  }
+  
+  @media (min-width: $desktop) {
+    max-width: 1140px;
+  }
+  
+  @media (min-width: $wide) {
+    max-width: 1320px;
+  }
+}
+
+// Секция "О компании" (Mobile First)
+.about {
+  padding: 25px 0;
+  background-color: $white;
+
+  .breadcrumbs {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+    color: #666;
+    overflow-x: auto; // Для очень маленьких экранов
+    white-space: nowrap;
+    padding-bottom: 5px; // Чтобы не обрезался скролл
+
+    a {
+      color: $primary-green;
+      text-decoration: none;
+      padding: 0 3px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      color: $dark-green;
+      font-weight: 500;
+      padding: 0 3px;
+    }
+
+    // Улучшаем для больших экранов
+    @media (min-width: $tablet) {
+      font-size: 0.9rem;
+      white-space: normal;
+      overflow-x: visible;
+    }
+  }
+
+  h2 {
+    color: $dark-green;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    line-height: 1.3;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: $accent-green;
+    }
+
+    // Увеличиваем для больших экранов
+    @media (min-width: $tablet) {
+      font-size: 2rem;
+      padding-bottom: 15px;
+      
+      &::after {
+        width: 80px;
+      }
+    }
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+
+    // Планшетный вид
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 0; // Фикс для flexbox
+
+      .lead {
+        font-size: 1.1rem;
+        color: $dark-green;
+        margin-bottom: 20px;
+        line-height: 1.4;
+
+        i {
+          color: $accent-green;
+          margin-right: 8px;
+        }
+
+        @media (min-width: $tablet) {
+          font-size: 1.2rem;
+        }
+      }
+
+      p {
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+
+        @media (min-width: $tablet) {
+          font-size: 1rem;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 0; // Фикс для flexbox
+      order: -1; // Картинка сверху на мобильных
+
+      @media (min-width: $tablet) {
+        order: 1; // Картинка справа на планшетах+
+      }
+
+      .team-photo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+
+      .image-caption {
+        margin-top: 10px;
+        font-style: italic;
+        color: #666;
+        text-align: center;
+        font-size: 0.85rem;
+
+        i {
+          color: $accent-green;
+          margin-right: 5px;
+        }
+
+        @media (min-width: $tablet) {
+          font-size: 0.9rem;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .highlight-box {
+    background-color: $light-green;
+    border-left: 3px solid $primary-green;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 6px 6px 0;
+
+    h3 {
+      margin-top: 0;
+      color: $dark-green;
+      font-size: 1.2rem;
+
+      i {
+        color: $accent-green;
+        margin-right: 8px;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      padding: 20px;
+      border-left-width: 4px;
+
+      h3 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+
+    .stat-item {
+      text-align: center;
+      background-color: $light-green;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+      .stat-number {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-green;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
+        color: $text-color;
+      }
+    }
+
+    // Адаптация для разных экранов
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      .stat-item {
+        padding: 20px;
+
+        .stat-number {
+          font-size: 2rem;
+        }
+
+        .stat-label {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .values {
+    margin-top: 40px;
+
+    h3 {
+      font-size: 1.5rem;
+      color: $dark-green;
+      text-align: center;
+      margin-bottom: 25px;
+      line-height: 1.3;
+
+      i {
+        color: $accent-green;
+        margin-right: 10px;
+      }
+
+      @media (min-width: $tablet) {
+        font-size: 1.8rem;
+      }
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      @media (min-width: $mobile) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: $tablet) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .value-card {
+        background-color: $white;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        min-height: 100%; // Для одинаковой высоты
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        i {
+          font-size: 2rem;
+          color: $primary-green;
+          margin-bottom: 12px;
+        }
+
+        h4 {
+          margin: 12px 0 8px;
+          color: $dark-green;
+          font-size: 1.1rem;
+        }
+
+        p {
+          color: #666;
+          font-size: 0.9rem;
+          margin: 0;
+        }
+
+        @media (min-width: $tablet) {
+          padding: 25px 20px;
+
+          i {
+            font-size: 2.5rem;
+          }
+
+          h4 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Специальные адаптации для очень маленьких телефонов
+@media (max-width: 360px) {
+  .about {
+    .stats {
+      grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
+
+// Оптимизация для больших экранов
+@media (min-width: $wide) {
+  .about {
+    padding: 50px 0;
+
+    .about-content {
+      gap: 50px;
+    }
+
+    .values {
+      margin-top: 60px;
+    }
+  }
+}

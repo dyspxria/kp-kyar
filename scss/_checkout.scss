@@ -1,0 +1,232 @@
+/* Переменные цветов */
+$primary-color: #2e7d32;
+$primary-light: #e8f5e9;
+$primary-dark: #1b5e20;
+$secondary-color: #ff8f00;
+$text-dark: #263238;
+$text-light: #757575;
+$border-color: #e0e0e0;
+$white: #ffffff;
+$error-color: #f44336;
+
+/* Брейкпоинты */
+$phone: 480px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+/* Основные стили */
+main {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+  min-height: calc(100vh - 200px);
+}
+
+.checkout {
+  max-width: 800px;
+  margin: 0 auto;
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: all 0.3s ease;
+
+  @media (max-width: $tablet) {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  @media (max-width: $phone) {
+    padding: 1rem;
+    box-shadow: none;
+    border: 1px solid $border-color;
+  }
+
+  h2 {
+    color: $primary-dark;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid $primary-light;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100px;
+      height: 2px;
+      background: $primary-color;
+    }
+
+    @media (max-width: $phone) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Форма оформления */
+#checkout-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.5rem;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      grid-column: span 2;
+
+      @media (max-width: $tablet) {
+        grid-column: span 1;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: $text-dark;
+      font-size: 0.95rem;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid $border-color;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: all 0.3s;
+      background-color: $white;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+      }
+
+      @media (max-width: $phone) {
+        padding: 0.7rem 0.9rem;
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232e7d32'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+    }
+  }
+
+  /* Кнопка оформления */
+  .btn {
+    grid-column: span 2;
+    background: $primary-color;
+    color: $white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background: $primary-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba($primary-color, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: $tablet) {
+      grid-column: span 1;
+    }
+
+    @media (max-width: $phone) {
+      padding: 0.9rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Валидация формы */
+input:invalid,
+textarea:invalid {
+  border-color: lighten($error-color, 20%);
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  box-shadow: 0 0 0 2px rgba($error-color, 0.2);
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+input:invalid + .error-message,
+textarea:invalid + .error-message {
+  display: block;
+}
+
+/* Анимация загрузки */
+.btn.loading {
+  position: relative;
+  color: transparent;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba($white, 0.3);
+    border-top-color: $white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Улучшения для мобильных */
+@media (max-width: $phone) {
+  .checkout {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  #checkout-form {
+    gap: 1rem;
+  }
+}
